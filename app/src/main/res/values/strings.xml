@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="adventures">Adventures</string>
+    <string name="title_activity_set_pickers">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="setting_the_adventure">...setting the adventure</string>
+    <string name="back">Back</string>
+    <string name="pickerImgPark">NeedFill</string>
+    <string name="textview">TextView</string>
+    <string name="helloText">HelloText</string>
+    <string name="hello">Hello</string>
+    <string name="hello2">Hello2</string>
+    <string name="theatre">Theatre</string>
+    <string name="helloagain">helloAgain</string>
+    <string name="parks">Parks</string>
+    <string name="markets">Markets</string>
+    <string name="city">City</string>
+    <string name="other">Other</string>
 </resources>

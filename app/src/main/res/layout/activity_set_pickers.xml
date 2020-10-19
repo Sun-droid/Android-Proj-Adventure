@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#818400"
+    tools:context=".setPickers">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:background="#F08080">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <Button
+                android:id="@+id/backFromPickers"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FCCBD652"
+                android:text="@string/back" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:background="#FCCBD652"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="638dp"
+        android:layout_marginTop="91dp"
+        android:background="#FCCBD652"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="308dp"
+            android:layout_height="618dp"
+            android:background="#FCCBD652"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    app:alignmentMode="alignMargins"
+                    app:columnCount="1"
+                    app:columnOrderPreserved="false"
+                    app:rowCount="3">
+
+
+                    <!-- android:drawableStart="@color/design_default_color_secondary"
+                android:text="@string/textview"
+                android:textColor="#FFFFFF"
+                app:layout_column="2"
+                app:layout_row="1"-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aParkPick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_columnWeight="1">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickLeft"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/park" />
+
+                                <TextView
+                                    android:id="@+id/textViewLR1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/park"
+                                    android:text="@string/hello"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+
+                                <!--android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aCityPick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickLeftR2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewLR2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+                                <!--android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOtherPick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRr1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello2"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOther2Pick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRightR2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRr2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/helloagain"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOtherPick3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRight3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRr3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello2"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOther2Pick3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRightR3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRL3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/helloagain"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aParkPickNr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_columnWeight="1">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickLeftNr1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewLR1Nr1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+                                <!--android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aCityPickNr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickLeftR2Nr2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewLR2Nr2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp" />
+                                <!--android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOtherPickNr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRightNr3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRr1Nr3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello2"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOther2PickNr3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRightR2Nr3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRr2Nr3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/helloagain"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOtherPick3Nr4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRight3Nr4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRr3Nr4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/hello2"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/aOther2Pick3Nr5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:layout_columnWeight="1"
+                            app:layout_rowWeight="1">
+
+                            <LinearLayout
+                                android:id="@+id/containerPickRightR3Nr5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_gravity="center_horizontal|center_vertical">
+                                <!--                    app:layout_column="1"
+
+                                    app:layout_row="1">-->
+
+                                <TextView
+                                    android:id="@+id/textViewRL3Nr5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_launcher_background"
+                                    android:text="@string/helloagain"
+                                    android:textColor="#FFFFFF" />
+                                <!-- android:drawableStart="@color/design_default_color_secondary"
+                        android:text="@string/textview"
+                        android:textColor="#FFFFFF"
+                        app:layout_column="2"
+                        app:layout_row="1"-->
+
+
+                                <!-- <ImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_horizontal"
+                         android:contentDescription="@string/pickerImgPark"
+                         android:src="@drawable/ic_launcher_foreground" />-->
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.gridlayout.widget.GridLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
